@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: api
-  version: 0.0.1
+  version: 0.0.2
 paths:
   /v1/syncs:
     post:
@@ -68,7 +68,6 @@ components:
       required:
         - method
         - headers
-        - body
         - query_params
         - metadata
     SyncNangoHttpMethod:
