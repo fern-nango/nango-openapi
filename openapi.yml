@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: api
-  version: 0.0.3
+  version: 0.0.4
 paths:
   /v1/syncs:
     post:
@@ -25,10 +25,10 @@ components:
       properties:
         url:
           type: string
-        base_url:
-          type: string
         method:
           $ref: '#/components/schemas/SyncNangoHttpMethod'
+        base_url:
+          type: string
         headers:
           type: object
           additionalProperties: {}
@@ -70,9 +70,7 @@ components:
       required:
         - url
         - method
-        - headers
         - query_params
-        - metadata
     SyncNangoHttpMethod:
       type: string
       enum:
