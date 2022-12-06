@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: api
-  version: 0.0.0
+  version: 0.0.1
 paths:
   /v1/syncs:
     post:
@@ -12,8 +12,6 @@ paths:
       responses:
         '204':
           description: ''
-      security:
-        - {}
       requestBody:
         required: true
         content:
