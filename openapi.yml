@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: api
-  version: 0.0.2
+  version: 0.0.3
 paths:
   /v1/syncs:
     post:
@@ -23,6 +23,8 @@ components:
     SyncNangoSyncConfig:
       type: object
       properties:
+        url:
+          type: string
         base_url:
           type: string
         method:
@@ -66,6 +68,7 @@ components:
           type: object
           additionalProperties: {}
       required:
+        - url
         - method
         - headers
         - query_params
@@ -79,4 +82,5 @@ components:
         - PATCH
         - DELETE
   securitySchemes: {}
-servers: []
+servers:
+  - url: http://localhost:3003
